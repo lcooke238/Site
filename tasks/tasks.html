@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <title>Distribute Tasks - Spliddit</title>
+    <link href="../style.css" media="all" rel="stylesheet" type="text/css"/>
+
+    <script src="../application.js" type="text/javascript"></script>
+
+    <!--[if !IE]> -->
+    <script src="../modern.min.js" type="text/javascript"></script>
+    <!-- <![endif]-->
+
+    <!--[if lte IE 9]>
+    <script src="/assets/legacy/legacy.min-fc84d4940f21d232d4f440973eabff24.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Spliddit's tasks calculator fairly divides household chores, work shifts at a hospital, or any other set of tasks.">
+    <meta name="viewport" content="width=device-width">
+    <link href="../assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->    
+  </head>
+  <body>
+    <div class="mobile-header">
+    <a id="menu-mobile" href="#sidr">Menu</a>
+    <a id="logo-mobile" href="../index.html"><img alt="Logo-mobile" height="24" src="../assets/logo-mobile.png" width="70"/></a>
+</div>
+
+<div id="sidr">
+    <ul class="mobile-nav">
+        <li><a href="../index.html">Home</a></li></li>
+        <li><a href="../rent/rent.html">Share Rent</a></li>
+        <li><a href="../fare/fare/html">Split Fare</a></li>
+        <li><a href="../credit/credit.html">Assign Credit</a></li>
+        <li><a href="../goods/goods.html">Divide Goods</a></li>        
+        <li><a href="./tasks.html">Distribute Tasks</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../feedback/feedback.html">Feedback</a></li>
+    </ul>
+</div><!--#sidr-->
+
+<div class="site">
+
+<header class="site-header">
+    <div class="wrap">
+        <div class="logo">
+            <a href="../index.html">
+                <img alt="Spliddit" height="83" src="../assets/spliddit_logo.png" width="240"/>
+            </a>
+        </div><!--.logo-->
+        <nav class="header-nav">
+            <ul class="nav-set-2">
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../feedback/feedback.html">Feedback</a></li>
+            </ul>
+            <ul class="nav-set-1">
+              <li class="divide">Divide: </li>
+              <li><a href="../rent/rent.html">Rent</a></li>
+              <li><a href="../fare/fare/html">Fare</a></li>
+              <li><a href="../credit/credit.html">Credit</a></li>
+              <li><a href="../goods/goods.html">Goods</a></li>        
+              <li><a href="./tasks.html">Tasks</a></li>
+            </ul>
+        </nav>
+    </div><!--.wrap-->
+</header><!--.site-header-->
+    
+<div class="innerpage-banner">
+    <div class="wrap">
+        <div class="page-title">
+            <h1>Distribute Tasks</h1>
+        </div>
+        <div class="banner-image">
+            <img alt="Distribute Tasks" height="246" src="./assets/assigning-chores.png" width="246"/>
+        </div>
+    </div><!--.wrap-->
+</div><!--.innerpage-banner-->
+
+<div class="page-content">
+    <div class="wrap">
+        <p>Spliddit's tasks calculator fairly divides household chores, work shifts at a hospital, or any other set of tasks. You begin by providing a list of tasks that you wish to assign (for example, morning shift, afternoon shift, night shift) and a list of participants. We then send the participants links where they specify how much they prefer each task relative to the others. Our algorithm uses these evaluations to propose a fair division of the tasks among the participants.</p>
+
+        <div class="start-bar">
+            <p style="text-align:center">
+                <a class="btn" href="./demo/demo.html" style="display:inline;margin:.5em">Live Demo</a>
+                <a class="btn" href="./new/new.html" style="display:inline;margin:.5em">Start <span>&raquo;</span></a>
+            </p>
+        </div><!--.start-bar-->  
+    
+        <h1>Fairness Properties</h1>
+
+        <div class="content-block" id="max-share">
+
+            <div class="align-right">
+
+                <h2 class="mobile">Equitability</h2>
+
+                <div class="equit">
+
+                    <img alt="People" class="people" height="154" src="./assets/people.png" width="221"/>
+                    <img alt="Large-box" class="large-box" height="60" src="./assets/large-box.png" width="74"/>
+                    <img alt="Med-box" class="med-box" height="48" src="./assets/med-box.png" width="56"/>
+                    <img alt="Small-box" class="small-box" height="39" src="./assets/small-box.png" width="51"/>
+                    <img alt="Arm-guy" class="arm-guy" height="120" src="./assets/arm-guy.png" width="70"/>
+                    <img alt="Arm-girl" class="arm-girl" height="120" src="./assets/arm-girl.png" width="70"/>
+                
+                </div><!--.equit-->
+                <p class="refresh equitr"><a href="#" title="Replay">refresh</a></p>
+            </div><!--.align-right-->
+
+            <div class="property-info left">
+
+                <h2 class="desktop">Equitability</h2>
+                <p>The assignment of tasks is equitable if all participants believe their workload is identical.</p>
+                <p>This property is guaranteed with respect to the <a href="#overview">lottery</a> produced by our method.</p>
+            
+            </div>
+
+        </div><!--.content-block-->
+
+        <div class="content-block last" id="efficient">
+
+            <div class="align-left">
+
+                <h2 class="mobile">Efficiency</h2>
+
+                <div class="family-circle-2">
+                    <div class="family-2">
+                        <img alt="Family-2" class="bodies" height="253" src="./assets/family-2.png" width="241"/>
+                        <img alt="Baby-eyes1" class="baby-eyes1" height="155" src="./assets/baby-eyes1.png" width="181"/>
+                        <img alt="Baby-eyes2" class="baby-eyes2" height="149" src="./assets/baby-eyes2.png" width="181"/>
+                        <img alt="Lady-smile" class="lady-smile" height="36" src="./assets/lady-smile.png" width="67"/>
+                        <img alt="Lady-frown" class="lady-frown" height="57" src="./assets/lady-frown.png" width="31"/>
+                        <img alt="Football" class="football-2" height="36" src="./assets/football.png" width="67"/>
+                        <img alt="Bottle" class="bottle-2" height="57" src="./assets/bottle.png" width="31"/>
+                        <img alt="Purse" class="purse-2" height="59" src="./assets/purse.png" width="59"/>
+                    </div><!--.family-->
+                </div><!--.circle-->
+                <p class="refresh effic"><a href="#" title="Replay">refresh</a></p>
+            
+            </div><!--.align-left-->
+            
+            <div class="property-info right">
+
+                <h2 class="desktop">Efficiency</h2>
+                <p>Our algorithm assigns the tasks in such a way that it would be impossible to find another assignment that benefits one participant without making another worse off.</p>
+                <p>This property is guaranteed with respect to the <a href="#overview">lottery</a> produced by our method.</p>
+            
+            </div><!--.property-info.right-->
+            
+        </div><!--.content-block-->
+
+        <div class="start-bar">
+            <p style="text-align:center">
+                <a class="btn" href="./demo.demo.html" style="display:inline;margin:.5em">Live Demo</a>
+                <a class="btn" href="./new/new.html" style="display:inline;margin:.5em">Start <span>&raquo;</span></a>
+            </p>
+        </div><!--.start-bar-->  
+
+        <a name="overview"></a>
+        <h1>Algorithm Overview</h1>
+        <p>Spliddit implements the Egalitarian Equivalent solution of Pazner and Schmeidler to arrive at an assignment that equalizes and minimizes the perceived (expected) workload of each participant, but could potentially split tasks between participants (i.e., it is a fractional assignment). We compute this solution by solving a linear program.<!--using <a target="_blank" href="http://en.wikipedia.org/wiki/CPLEX">CPLEX</a>.--> Via another linear program we can then draw a suggested allocation from a lottery that rounds the fractional assignment up or down without changing the expected number of tasks performed by each participant. A lottery is an especially compelling solution for distributing tasks when Spliddit is used for this purpose on a regular basis, say weekly or monthly.</p>
+        <p><strong>References:</strong> <a target="_blank" href="http://econdse.org/wp-content/uploads/2014/10/panzer-schmiedler-exchange.pdf">"Egalitarian Equivalent Allocations: A New Concept of Economic Equity"</a>, by Elisha A. Pazner and David Schmeidler; <a target="_blank" href="http://faculty.chicagobooth.edu/eric.budish/research/Budish-Che-Kojima-Milgrom-2013-AER.pdf">"Designing Random Allocation Mechanisms: Theory and Applications"</a>, by Eric Budish, Yeon-Koo Che, Fuhito Kojima, and Paul Milgrom</p>
+
+        <div class="start-bar">
+            <p style="text-align:center">
+                <a class="btn" href="./demo/demo.html" style="display:inline;margin:.5em">Live Demo</a>
+                <a class="btn" href="./new/new.html" style="display:inline;margin:.5em">Start <span>&raquo;</span></a>
+            </p>
+        </div><!--.start-bar-->  
+
+    </div><!--.wrap-->
+</div><!--.page-content-->
+    <footer class="site-footer">
+    <div class="wrap">
+        <div class="primary-footer">
+            <div class="footer-logo">
+                <a href="../index.html">
+                    <img alt="Spliddit" height="63" src="../assets/footer-logo.png" width="180"/>
+                </a>
+            </div><!--.footer-logo-->
+            <div class="footer-nav">
+                <ul class="nav-set-1">
+                    <li><a href="../rent/rent.html">Share Rent</a></li>
+                    <li><a href="../fare/fare.html">Split Fare</a></li>
+                    <li><a href="../credit/credit.html">Assign Credit</a></li>
+                    <li><a href="../goods/goods.html">Divide Goods</a></li>                    
+                    <li><a href="./tasks.html">Distribute Tasks</a></li>
+                </ul>
+                <ul class="nav-set-2">
+                  <li><a href="../about/about.html">About</a></li>
+                  <li><a href="../feedback/feedback.html">Feedback</a></li>
+                </ul>
+            </div><!--.footer-nav-->
+            <div class="social">
+                <ul>
+                    <li class="share"><span>Follow</span></li>
+                    <li class="fb"><a target="_blank" href="https://www.facebook.com/SplidditOrg">Facebook</a></li>
+                    <li class="tw"><a target="_blank" href="http://twitter.com/Spliddit">Twitter</a></li>
+                    <li class="gp"><a target="_blank" href="https://plus.google.com/102161671080031579471/posts">Google Plus</a></li>
+                    <br><br><br><br>
+                    <div id="mailing-list">
+                        <li class="share"><span>Newsletter</span></li>
+                        <br><br>
+                        <div style="width:100%">
+                            <li style="width:80%"><input id="ipt-mailing-list" maxlength="50" name="mailing_list_email" placeholder="Email" style="width: 100%" type="text"/></li>
+                            <li style="width:20%"><input id="btn-mailing-list" name="commit" onclick="return addToMailingList()" style="width: 100%" type="submit" value="Go"/></li>
+                        </div>
+                    </div>
+                </ul>
+            </div><!--.social-->
+        </div><!--.primary-footer-->
+        <div class="credits">
+            <p class="copyright">
+                &copy; 2023 <a href="http://www.cs.cmu.edu/~arielpro/" target="_blank">Ariel Procaccia</a>, <a href="http://www.cs.toronto.edu/~nisarg/" target="_blank">Nisarg Shah</a>, and <a href="http://jagoldman.com/" target="_blank">Jonathan Goldman</a>
+            </p>
+            <p class="imagebox">
+                <a href="http://imagebox.com/" target="_blank">Site designed by Imagebox</a>
+            </p>
+        </div><!--.credits-->
+    </div><!--.wrap-->
+</footer><!--.site-footer-->
+</div><!--.site-->
+  </body>
+  
+</html>
